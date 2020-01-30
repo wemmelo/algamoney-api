@@ -12,6 +12,7 @@ public class Categoria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
+	//essas duas linhas abaixo são o mapeamento das colunas
 	private Long codigo;
 	private String nome;
 	
