@@ -3,6 +3,7 @@ package com.example.algamoney.api.resource;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,11 +40,20 @@ public class CategoriaResource {
 
 	//com essa linha eu defino o ver http que esse controlador vai ouvir
 	@GetMapping
+	//Isso é uma entidade de resposta
 	public List<Categoria> listar(){
 		
-		return categoriaRepository.findAll();
+		return  categoriaRepository.findAll();
 		//esse find.All já esta implementado pelo CategoriaReposiroty
 		//ele vai buscar no BD um select * from categoria, ou seja,
 		//ele entrega as categorias para o List que vai listar elas.
+		
+		/*
+		Isso é uma entidade de resposta
+		
+		public ResponseEntity<?> listar(){
+		List<Categoria> categorias = categoriaRepository.findAll();
+		return !categorias.isEmpty() ? ResponseEntity.ok(categorias) : ResponseEntity.noContent().build();
+		 */
 	}
 }
