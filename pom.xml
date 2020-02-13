@@ -19,16 +19,16 @@
 	</properties>
 
 	<dependencies>
-        <dependency>
+        <dependency><!-- facilita a administrção do banco de dados -->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-        <dependency>
+        <dependency><!-- Já traz o Tomcat embarcado -->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         
-        <dependency>
+        <dependency><!-- Se fizermoa qualquer alteração nas classes ele faz o deploy automaticamente-->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
